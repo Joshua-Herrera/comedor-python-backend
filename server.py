@@ -48,7 +48,7 @@ def getPendingOrdersDB(query):
 
 
 async def index(request):
-    return web.response('Hola')
+    return web.json_response({'message': 'success'})
 
 async def getAllBills(request):
     data = getBills()
@@ -64,6 +64,7 @@ async def getPendingOrders(request):
 app = web.Application()
 app.add_routes([web.get('/', index)])
 app.add_routes([web.get('/getAllBills', getAllBills)])
+app.add_routes([web.get('/api/v1/bills/orders', getPendingOrders)])
 app.add_routes([web.post('/api/v1/bills/orders', getPendingOrders)])
 
 if __name__ == '__main__':
