@@ -1,4 +1,5 @@
 from aiohttp import web
+import os
 import pymongo
 import json
 import bson
@@ -68,4 +69,6 @@ app.add_routes([web.get('/api/v1/bills/orders', getPendingOrders)])
 app.add_routes([web.post('/api/v1/bills/orders', getPendingOrders)])
 
 if __name__ == '__main__':
-    web.run_app(app)
+    web.run_app(app, port=os.environ.get('PORT'))
+
+    # os.environ.get('USER')
