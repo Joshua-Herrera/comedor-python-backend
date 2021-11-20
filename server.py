@@ -7,7 +7,7 @@ from bson import json_util
 
 def get_database():
     try:
-      client = pymongo.MongoClient("mongodb+srv://tabs7:halexguillen@wachimingo.aorej.mongodb.net/microempresa?ssl=true&retrywrites=false&ssl_cert_reqs=CERT_NONE", connectTimeoutMS=30000, socketTimeoutMS=None, connect=False, maxPoolsize=1)
+      client = pymongo.MongoClient("mongodb+srv://tabs7:preespecialidad@wachimingo.aorej.mongodb.net/microempresa?ssl=true&retrywrites=false&ssl_cert_reqs=CERT_NONE", connectTimeoutMS=30000, socketTimeoutMS=None, connect=False, maxPoolsize=1)
     #   print(client.microempresa)
     except pymongo.errors.ConnectionFailure as e:
       print(e)
